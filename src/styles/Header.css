@@ -1,0 +1,120 @@
+.header {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "autotext header_nav";
+}
+
+@media (min-width: 350px) {
+  .header {
+    -ms-grid-columns: 13em 3em;
+        grid-template-columns: 13em 3em;
+  }
+}
+
+@media (min-width: 625px) {
+  .header {
+    -ms-grid-columns: 48em 3em;
+        grid-template-columns: 48em 3em;
+  }
+  .header_title {
+    font-size: 12px;
+  }
+}
+
+.header_nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header_nav;
+}
+
+.autotext {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: autotext;
+  line-height: 7pt;
+  height: 20px;
+}
+
+.nav_link {
+  color: #D7FEFE;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+}
+
+.header_title {
+  font-family: "Quantico", sans-serif;
+  font-weight: 200;
+  font-size: 10px;
+}
+
+.menu-branding {
+  font-family: "Montserrat Subrayada", sans-serif;
+  color: #48DAF9;
+  line-height: 13pt;
+}
+
+/***React Burger Menu styles***/
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 26px;
+  height: 20px;
+  right: 26px;
+  top: 26px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #1178AE;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #001F45;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #D7FEFE;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #1178AE;
+  padding: 0.5em 0.5em 0;
+  font-size: 1.15em;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.5em;
+  height: 50% !important;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=Header.css.map */

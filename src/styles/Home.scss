@@ -1,0 +1,330 @@
+@import "variables/variables.scss";
+
+html{
+  height: 100%
+}
+
+.autotext {
+  color: $home1;
+}
+
+body{
+    background-color: $home_bg;
+    font-family: $nav_text;
+    font-weight: 600;
+    margin: 0 12px;
+    min-height: 100%;
+}
+
+h1.brand {
+    font-family: $mct630_brand;
+    color: $home_txt;
+    height: 10pt;
+}
+
+.autotyping {
+    font-family: $typingtext;
+    color: $home1;
+}
+
+.home-links{
+    //background-color: #2e6380;
+    text-align: right;
+    background-image: url('../img/blueface.png');
+    background-repeat: no-repeat;
+    background-size: 95%;
+    height: 82vh;
+    line-height: 72px;
+}
+
+.home-links a {
+    background: #06474569;
+    font-family: $home-links;
+    font-size: 60px;
+    text-decoration: none;
+    color: $home1;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #65a3ff,
+    -0.2rem 0.1rem 1rem #6589ff, 0.2rem 0.1rem 1rem #659bff,
+    0 -0.5rem 2rem #2483ff, 0 0.5rem 3rem #245eff;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+.about_U{
+    font-size: 68px;
+}
+
+@media (min-width: 350px) {
+  .home-links{
+    background-size: 80%;
+    height: 79vh;
+    line-height: 70px;
+  }
+
+  .home-links a {
+    font-size: 72px;
+  }
+
+  .about_U{
+    font-size: 85px;
+  }
+}
+
+@media (min-width: 470px) {
+  .home-links{
+    background-size: 68%;
+    height: 79vh;
+    line-height: 85px;
+  }
+
+  .home-links a {
+    font-size: 85px;
+  }
+
+  .about_U{
+    font-size: 90px;
+  }
+}
+
+@media (min-width: 625px) {
+  .home-links{
+    background-size: 40%;
+    height: 79vh;
+    line-height: 100px;
+  }
+
+  .home-links a {
+    font-size: 125px;
+  }
+
+  .about_U{
+    font-size: 146px;
+  }
+
+  .header {
+    grid-template-columns: 48em 3em;
+  }
+
+  .header_title {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1225px) {
+  .home-links{
+    background-size: 30%;
+    height: 79vh;
+    line-height: 120px;
+  }
+
+  .home-links a {
+    font-size: 150px;
+  }
+
+  .about_U{
+    font-size: 175px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-links{
+    background-size: 25%;
+    height: 82vh;
+    line-height: 120px;
+  }
+
+  .home-links a {
+    font-size: 150px;
+  }
+
+  .about_U{
+    font-size: 175px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .home-links{
+    background-size: 30%;
+    line-height: 180px;
+  }
+
+  .home-links a {
+    font-size: 230px;
+  }
+
+  .about_U{
+    font-size: 275px;
+  }
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #e6eaff;
+    text-shadow: 0 0 0.6rem #e6eaff, 0 0 1.5rem #657cff,
+      -0.2rem 0.1rem 1rem #6581ff, 0.2rem 0.1rem 1rem #657cff,
+      0 -0.5rem 2rem #2457ff, 0 0.5rem 3rem #247cff;
+  }
+  28%,
+  33% {
+    color: #2b52ff;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: $home_txt;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #183c6b;
+    text-shadow: none;
+  }
+  100% {
+    color: #e6f5ff;
+    text-shadow: 0 0 0.6rem #e6fbff, 0 0 1.5rem #659bff,
+      -0.2rem 0.1rem 1rem #656fff, 0.2rem 0.1rem 1rem #6581ff,
+      0 -0.5rem 2rem #3324ff, 0 0.5rem 3rem #2824ff;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.blueface {
+    background-image: url('../img/blueface.png');
+}

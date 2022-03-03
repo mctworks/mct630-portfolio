@@ -19,6 +19,20 @@ export default function Main (){
         if (location !== displayLocation) setTransitionStage("fadeOut");
     }, [location]);
 
+    var typing_color;
+
+    if (location.pathname === "/about") {
+        typing_color = "color: #aaa";
+    } else if (location.pathname === "/projects") {
+        typing_color = "color: #f5b0b0";
+    } else if (location.pathname === "/contact") {
+        typing_color = "color: #aaa";
+    } else if (location.pathname === "/") {
+        typing_color = "color: #1178AE";
+    } else {
+        typing_color = "color: #FFF";
+    };
+
     return (<React.Fragment>
         <div id="outer-container" className={`${transitionStage}`}
         onAnimationEnd={() => { 
@@ -28,7 +42,7 @@ export default function Main (){
             }
         }}
         >
-        <Header />
+        <Header style={typing_color}/>
         <div id='page-wrap'>
         <Routes location={displayLocation}>
         <Route exact path='/' element={<Home/> }  />
